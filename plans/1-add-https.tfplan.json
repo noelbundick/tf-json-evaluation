@@ -1,0 +1,777 @@
+{
+  "format_version": "0.1",
+  "terraform_version": "0.14.6",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_lb.lb1",
+          "mode": "managed",
+          "type": "azurerm_lb",
+          "name": "lb1",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "frontend_ip_configuration": [
+              {
+                "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/default",
+                "inbound_nat_rules": [],
+                "load_balancer_rules": [],
+                "name": "default",
+                "outbound_rules": [],
+                "private_ip_address": "",
+                "private_ip_address_allocation": "Dynamic",
+                "private_ip_address_version": "IPv4",
+                "public_ip_address_id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/publicIPAddresses/pip1",
+                "public_ip_prefix_id": "",
+                "subnet_id": "",
+                "zones": []
+              }
+            ],
+            "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/loadBalancers/lb1",
+            "location": "westus2",
+            "name": "lb1",
+            "private_ip_address": "",
+            "private_ip_addresses": [],
+            "resource_group_name": "test-rg1",
+            "sku": "Basic",
+            "tags": {},
+            "timeouts": null
+          }
+        },
+        {
+          "address": "azurerm_network_security_group.nsg1",
+          "mode": "managed",
+          "type": "azurerm_network_security_group",
+          "name": "nsg1",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/networkSecurityGroups/nsg1",
+            "location": "westus2",
+            "name": "nsg1",
+            "resource_group_name": "test-rg1",
+            "security_rule": [
+              {
+                "access": "allow",
+                "description": "value",
+                "destination_address_prefix": "*",
+                "destination_address_prefixes": [],
+                "destination_application_security_group_ids": [],
+                "destination_port_range": "443",
+                "destination_port_ranges": [],
+                "direction": "inbound",
+                "name": "allow https",
+                "priority": 110,
+                "protocol": "tcp",
+                "source_address_prefix": "*",
+                "source_address_prefixes": [],
+                "source_application_security_group_ids": [],
+                "source_port_range": "*",
+                "source_port_ranges": []
+              },
+              {
+                "access": "allow",
+                "description": "value",
+                "destination_address_prefix": "*",
+                "destination_address_prefixes": [],
+                "destination_application_security_group_ids": [],
+                "destination_port_range": "80",
+                "destination_port_ranges": [],
+                "direction": "inbound",
+                "name": "allow http",
+                "priority": 100,
+                "protocol": "tcp",
+                "source_address_prefix": "*",
+                "source_address_prefixes": [],
+                "source_application_security_group_ids": [],
+                "source_port_range": "*",
+                "source_port_ranges": []
+              }
+            ],
+            "tags": {},
+            "timeouts": null
+          }
+        },
+        {
+          "address": "azurerm_public_ip.pip1",
+          "mode": "managed",
+          "type": "azurerm_public_ip",
+          "name": "pip1",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "allocation_method": "Dynamic",
+            "domain_name_label": null,
+            "fqdn": null,
+            "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/publicIPAddresses/pip1",
+            "idle_timeout_in_minutes": 4,
+            "ip_address": "",
+            "ip_version": "IPv4",
+            "location": "westus2",
+            "name": "pip1",
+            "public_ip_prefix_id": null,
+            "resource_group_name": "test-rg1",
+            "reverse_fqdn": null,
+            "sku": "Basic",
+            "tags": {},
+            "timeouts": null,
+            "zones": []
+          }
+        },
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1",
+            "location": "westus2",
+            "name": "test-rg1",
+            "tags": {},
+            "timeouts": null
+          }
+        },
+        {
+          "address": "azurerm_virtual_network.vnet1",
+          "mode": "managed",
+          "type": "azurerm_virtual_network",
+          "name": "vnet1",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "address_space": [
+              "10.0.0.0/16"
+            ],
+            "bgp_community": "",
+            "ddos_protection_plan": [],
+            "dns_servers": [],
+            "guid": "5a9c388b-bcff-436d-953c-0a89195c35e8",
+            "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/virtualNetworks/vnet1",
+            "location": "westus2",
+            "name": "vnet1",
+            "resource_group_name": "test-rg1",
+            "subnet": [
+              {
+                "address_prefix": "10.0.0.0/24",
+                "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+                "name": "subnet1",
+                "security_group": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/networkSecurityGroups/nsg1"
+              }
+            ],
+            "tags": {},
+            "timeouts": null,
+            "vm_protection_enabled": false
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "azurerm_lb.lb1",
+      "mode": "managed",
+      "type": "azurerm_lb",
+      "name": "lb1",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": {
+          "frontend_ip_configuration": [
+            {
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/default",
+              "inbound_nat_rules": [],
+              "load_balancer_rules": [],
+              "name": "default",
+              "outbound_rules": [],
+              "private_ip_address": "",
+              "private_ip_address_allocation": "Dynamic",
+              "private_ip_address_version": "IPv4",
+              "public_ip_address_id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/publicIPAddresses/pip1",
+              "public_ip_prefix_id": "",
+              "subnet_id": "",
+              "zones": []
+            }
+          ],
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/loadBalancers/lb1",
+          "location": "westus2",
+          "name": "lb1",
+          "private_ip_address": "",
+          "private_ip_addresses": [],
+          "resource_group_name": "test-rg1",
+          "sku": "Basic",
+          "tags": {},
+          "timeouts": null
+        },
+        "after": {
+          "frontend_ip_configuration": [
+            {
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/default",
+              "inbound_nat_rules": [],
+              "load_balancer_rules": [],
+              "name": "default",
+              "outbound_rules": [],
+              "private_ip_address": "",
+              "private_ip_address_allocation": "Dynamic",
+              "private_ip_address_version": "IPv4",
+              "public_ip_address_id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/publicIPAddresses/pip1",
+              "public_ip_prefix_id": "",
+              "subnet_id": "",
+              "zones": []
+            }
+          ],
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/loadBalancers/lb1",
+          "location": "westus2",
+          "name": "lb1",
+          "private_ip_address": "",
+          "private_ip_addresses": [],
+          "resource_group_name": "test-rg1",
+          "sku": "Basic",
+          "tags": {},
+          "timeouts": null
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "address": "azurerm_network_security_group.nsg1",
+      "mode": "managed",
+      "type": "azurerm_network_security_group",
+      "name": "nsg1",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": {
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/networkSecurityGroups/nsg1",
+          "location": "westus2",
+          "name": "nsg1",
+          "resource_group_name": "test-rg1",
+          "security_rule": [
+            {
+              "access": "Allow",
+              "description": "value",
+              "destination_address_prefix": "*",
+              "destination_address_prefixes": [],
+              "destination_application_security_group_ids": [],
+              "destination_port_range": "80",
+              "destination_port_ranges": [],
+              "direction": "Inbound",
+              "name": "allow http",
+              "priority": 100,
+              "protocol": "tcp",
+              "source_address_prefix": "*",
+              "source_address_prefixes": [],
+              "source_application_security_group_ids": [],
+              "source_port_range": "*",
+              "source_port_ranges": []
+            }
+          ],
+          "tags": {},
+          "timeouts": null
+        },
+        "after": {
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/networkSecurityGroups/nsg1",
+          "location": "westus2",
+          "name": "nsg1",
+          "resource_group_name": "test-rg1",
+          "security_rule": [
+            {
+              "access": "allow",
+              "description": "value",
+              "destination_address_prefix": "*",
+              "destination_address_prefixes": [],
+              "destination_application_security_group_ids": [],
+              "destination_port_range": "443",
+              "destination_port_ranges": [],
+              "direction": "inbound",
+              "name": "allow https",
+              "priority": 110,
+              "protocol": "tcp",
+              "source_address_prefix": "*",
+              "source_address_prefixes": [],
+              "source_application_security_group_ids": [],
+              "source_port_range": "*",
+              "source_port_ranges": []
+            },
+            {
+              "access": "allow",
+              "description": "value",
+              "destination_address_prefix": "*",
+              "destination_address_prefixes": [],
+              "destination_application_security_group_ids": [],
+              "destination_port_range": "80",
+              "destination_port_ranges": [],
+              "direction": "inbound",
+              "name": "allow http",
+              "priority": 100,
+              "protocol": "tcp",
+              "source_address_prefix": "*",
+              "source_address_prefixes": [],
+              "source_application_security_group_ids": [],
+              "source_port_range": "*",
+              "source_port_ranges": []
+            }
+          ],
+          "tags": {},
+          "timeouts": null
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "address": "azurerm_public_ip.pip1",
+      "mode": "managed",
+      "type": "azurerm_public_ip",
+      "name": "pip1",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": {
+          "allocation_method": "Dynamic",
+          "domain_name_label": null,
+          "fqdn": null,
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/publicIPAddresses/pip1",
+          "idle_timeout_in_minutes": 4,
+          "ip_address": "",
+          "ip_version": "IPv4",
+          "location": "westus2",
+          "name": "pip1",
+          "public_ip_prefix_id": null,
+          "resource_group_name": "test-rg1",
+          "reverse_fqdn": null,
+          "sku": "Basic",
+          "tags": {},
+          "timeouts": null,
+          "zones": []
+        },
+        "after": {
+          "allocation_method": "Dynamic",
+          "domain_name_label": null,
+          "fqdn": null,
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/publicIPAddresses/pip1",
+          "idle_timeout_in_minutes": 4,
+          "ip_address": "",
+          "ip_version": "IPv4",
+          "location": "westus2",
+          "name": "pip1",
+          "public_ip_prefix_id": null,
+          "resource_group_name": "test-rg1",
+          "reverse_fqdn": null,
+          "sku": "Basic",
+          "tags": {},
+          "timeouts": null,
+          "zones": []
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "address": "azurerm_resource_group.rg",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rg",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": {
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1",
+          "location": "westus2",
+          "name": "test-rg1",
+          "tags": {},
+          "timeouts": null
+        },
+        "after": {
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1",
+          "location": "westus2",
+          "name": "test-rg1",
+          "tags": {},
+          "timeouts": null
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "address": "azurerm_virtual_network.vnet1",
+      "mode": "managed",
+      "type": "azurerm_virtual_network",
+      "name": "vnet1",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": {
+          "address_space": [
+            "10.0.0.0/16"
+          ],
+          "bgp_community": "",
+          "ddos_protection_plan": [],
+          "dns_servers": [],
+          "guid": "5a9c388b-bcff-436d-953c-0a89195c35e8",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/virtualNetworks/vnet1",
+          "location": "westus2",
+          "name": "vnet1",
+          "resource_group_name": "test-rg1",
+          "subnet": [
+            {
+              "address_prefix": "10.0.0.0/24",
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+              "name": "subnet1",
+              "security_group": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/networkSecurityGroups/nsg1"
+            }
+          ],
+          "tags": {},
+          "timeouts": null,
+          "vm_protection_enabled": false
+        },
+        "after": {
+          "address_space": [
+            "10.0.0.0/16"
+          ],
+          "bgp_community": "",
+          "ddos_protection_plan": [],
+          "dns_servers": [],
+          "guid": "5a9c388b-bcff-436d-953c-0a89195c35e8",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/virtualNetworks/vnet1",
+          "location": "westus2",
+          "name": "vnet1",
+          "resource_group_name": "test-rg1",
+          "subnet": [
+            {
+              "address_prefix": "10.0.0.0/24",
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+              "name": "subnet1",
+              "security_group": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/networkSecurityGroups/nsg1"
+            }
+          ],
+          "tags": {},
+          "timeouts": null,
+          "vm_protection_enabled": false
+        },
+        "after_unknown": {}
+      }
+    }
+  ],
+  "prior_state": {
+    "format_version": "0.1",
+    "terraform_version": "0.14.6",
+    "values": {
+      "root_module": {
+        "resources": [
+          {
+            "address": "azurerm_lb.lb1",
+            "mode": "managed",
+            "type": "azurerm_lb",
+            "name": "lb1",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "schema_version": 0,
+            "values": {
+              "frontend_ip_configuration": [
+                {
+                  "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/default",
+                  "inbound_nat_rules": [],
+                  "load_balancer_rules": [],
+                  "name": "default",
+                  "outbound_rules": [],
+                  "private_ip_address": "",
+                  "private_ip_address_allocation": "Dynamic",
+                  "private_ip_address_version": "IPv4",
+                  "public_ip_address_id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/publicIPAddresses/pip1",
+                  "public_ip_prefix_id": "",
+                  "subnet_id": "",
+                  "zones": []
+                }
+              ],
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/loadBalancers/lb1",
+              "location": "westus2",
+              "name": "lb1",
+              "private_ip_address": "",
+              "private_ip_addresses": [],
+              "resource_group_name": "test-rg1",
+              "sku": "Basic",
+              "tags": {},
+              "timeouts": null
+            },
+            "depends_on": [
+              "azurerm_public_ip.pip1",
+              "azurerm_resource_group.rg"
+            ]
+          },
+          {
+            "address": "azurerm_network_security_group.nsg1",
+            "mode": "managed",
+            "type": "azurerm_network_security_group",
+            "name": "nsg1",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "schema_version": 0,
+            "values": {
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/networkSecurityGroups/nsg1",
+              "location": "westus2",
+              "name": "nsg1",
+              "resource_group_name": "test-rg1",
+              "security_rule": [
+                {
+                  "access": "Allow",
+                  "description": "value",
+                  "destination_address_prefix": "*",
+                  "destination_address_prefixes": [],
+                  "destination_application_security_group_ids": [],
+                  "destination_port_range": "80",
+                  "destination_port_ranges": [],
+                  "direction": "Inbound",
+                  "name": "allow http",
+                  "priority": 100,
+                  "protocol": "tcp",
+                  "source_address_prefix": "*",
+                  "source_address_prefixes": [],
+                  "source_application_security_group_ids": [],
+                  "source_port_range": "*",
+                  "source_port_ranges": []
+                }
+              ],
+              "tags": {},
+              "timeouts": null
+            },
+            "depends_on": [
+              "azurerm_resource_group.rg"
+            ]
+          },
+          {
+            "address": "azurerm_public_ip.pip1",
+            "mode": "managed",
+            "type": "azurerm_public_ip",
+            "name": "pip1",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "schema_version": 0,
+            "values": {
+              "allocation_method": "Dynamic",
+              "domain_name_label": null,
+              "fqdn": null,
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/publicIPAddresses/pip1",
+              "idle_timeout_in_minutes": 4,
+              "ip_address": "",
+              "ip_version": "IPv4",
+              "location": "westus2",
+              "name": "pip1",
+              "public_ip_prefix_id": null,
+              "resource_group_name": "test-rg1",
+              "reverse_fqdn": null,
+              "sku": "Basic",
+              "tags": {},
+              "timeouts": null,
+              "zones": []
+            },
+            "depends_on": [
+              "azurerm_resource_group.rg"
+            ]
+          },
+          {
+            "address": "azurerm_resource_group.rg",
+            "mode": "managed",
+            "type": "azurerm_resource_group",
+            "name": "rg",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "schema_version": 0,
+            "values": {
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1",
+              "location": "westus2",
+              "name": "test-rg1",
+              "tags": {},
+              "timeouts": null
+            }
+          },
+          {
+            "address": "azurerm_virtual_network.vnet1",
+            "mode": "managed",
+            "type": "azurerm_virtual_network",
+            "name": "vnet1",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "schema_version": 0,
+            "values": {
+              "address_space": [
+                "10.0.0.0/16"
+              ],
+              "bgp_community": "",
+              "ddos_protection_plan": [],
+              "dns_servers": [],
+              "guid": "5a9c388b-bcff-436d-953c-0a89195c35e8",
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/virtualNetworks/vnet1",
+              "location": "westus2",
+              "name": "vnet1",
+              "resource_group_name": "test-rg1",
+              "subnet": [
+                {
+                  "address_prefix": "10.0.0.0/24",
+                  "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+                  "name": "subnet1",
+                  "security_group": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/test-rg1/providers/Microsoft.Network/networkSecurityGroups/nsg1"
+                }
+              ],
+              "tags": {},
+              "timeouts": null,
+              "vm_protection_enabled": false
+            },
+            "depends_on": [
+              "azurerm_network_security_group.nsg1",
+              "azurerm_resource_group.rg"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "configuration": {
+    "provider_config": {
+      "azurerm": {
+        "name": "azurerm",
+        "expressions": {
+          "features": [
+            {}
+          ]
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_lb.lb1",
+          "mode": "managed",
+          "type": "azurerm_lb",
+          "name": "lb1",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "frontend_ip_configuration": [
+              {
+                "name": {
+                  "constant_value": "default"
+                },
+                "public_ip_address_id": {
+                  "references": [
+                    "azurerm_public_ip.pip1"
+                  ]
+                }
+              }
+            ],
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "lb1"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_network_security_group.nsg1",
+          "mode": "managed",
+          "type": "azurerm_network_security_group",
+          "name": "nsg1",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "nsg1"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_public_ip.pip1",
+          "mode": "managed",
+          "type": "azurerm_public_ip",
+          "name": "pip1",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "allocation_method": {
+              "constant_value": "Dynamic"
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "pip1"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "location": {
+              "constant_value": "westus2"
+            },
+            "name": {
+              "constant_value": "test-rg1"
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_virtual_network.vnet1",
+          "mode": "managed",
+          "type": "azurerm_virtual_network",
+          "name": "vnet1",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "address_space": {
+              "constant_value": [
+                "10.0.0.0/16"
+              ]
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "vnet1"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            }
+          },
+          "schema_version": 0
+        }
+      ]
+    }
+  }
+}
