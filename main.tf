@@ -13,7 +13,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "test-rg1"
+  name     = "josh-test-rg"
   location = "westus2"
 }
 
@@ -53,18 +53,18 @@ resource "azurerm_network_security_group" "nsg1" {
     source_port_range          = "*"
   }
 
-  # security_rule {
-  #   access                     = "allow"
-  #   description                = "value"
-  #   destination_address_prefix = "*"
-  #   destination_port_range     = "443"
-  #   direction                  = "inbound"
-  #   name                       = "allow https"
-  #   priority                   = 110
-  #   protocol                   = "tcp"
-  #   source_address_prefix      = "*"
-  #   source_port_range          = "*"
-  # }
+  security_rule {
+    access                     = "allow"
+    description                = "value"
+    destination_address_prefix = "*"
+    destination_port_range     = "443"
+    direction                  = "inbound"
+    name                       = "allow https"
+    priority                   = 110
+    protocol                   = "tcp"
+    source_address_prefix      = "*"
+    source_port_range          = "*"
+  }
 }
 
 resource "azurerm_virtual_network" "vnet1" {

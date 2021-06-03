@@ -11,17 +11,17 @@
 ```shell
 terraform init
 
-terraform plan -o=./plans/0-initial.tfplan
+terraform plan -out ./plans/0-initial.tfplan
 terraform show -json ./plans/0-initial.tfplan | jq . > ./plans/0-initial.tfplan.json
 terraform apply ./plans/0-initial.tfplan
-az graph query -q 'where resourceGroup == "test-rg1"' > ./graphs/0-initial.graph.json
+az graph query -q "where resourceGroup == 'josh-test-rg'" > ./graphs/0-initial.graph.json
 
 # uncomment the added NSG rule in main.tf
 
-terraform plan -out=./plans/1-add-https.tfplan
+terraform plan -out ./plans/1-add-https.tfplan
 terraform show -json ./plans/1-add-https.tfplan | jq . > ./plans/1-add-https.tfplan.json
 terraform apply ./plans/1-add-https.tfplan
-az graph query -q 'where resourceGroup == "test-rg1"' > ./graphs/1-add-https.graph.json
+az graph query -q "where resourceGroup == 'josh-test-rg'" > ./graphs/1-add-https.graph.json
 
 terraform destroy
 ```
