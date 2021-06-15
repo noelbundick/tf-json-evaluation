@@ -1,0 +1,276 @@
+[
+  {
+    "extendedLocation": null,
+    "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1",
+    "identity": null,
+    "kind": "",
+    "location": "westus2",
+    "managedBy": "",
+    "name": "nsg1",
+    "plan": null,
+    "properties": {
+      "defaultSecurityRules": [
+        {
+          "etag": "W/\"6bbd9aee-4970-437a-8eb7-7bdb310ce526\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1/defaultSecurityRules/AllowVnetInBound",
+          "name": "AllowVnetInBound",
+          "properties": {
+            "access": "Allow",
+            "description": "Allow inbound traffic from all VMs in VNET",
+            "destinationAddressPrefix": "VirtualNetwork",
+            "destinationAddressPrefixes": [],
+            "destinationPortRange": "*",
+            "destinationPortRanges": [],
+            "direction": "Inbound",
+            "priority": 65000,
+            "protocol": "*",
+            "provisioningState": "Succeeded",
+            "sourceAddressPrefix": "VirtualNetwork",
+            "sourceAddressPrefixes": [],
+            "sourcePortRange": "*",
+            "sourcePortRanges": []
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+        },
+        {
+          "etag": "W/\"6bbd9aee-4970-437a-8eb7-7bdb310ce526\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1/defaultSecurityRules/AllowAzureLoadBalancerInBound",
+          "name": "AllowAzureLoadBalancerInBound",
+          "properties": {
+            "access": "Allow",
+            "description": "Allow inbound traffic from azure load balancer",
+            "destinationAddressPrefix": "*",
+            "destinationAddressPrefixes": [],
+            "destinationPortRange": "*",
+            "destinationPortRanges": [],
+            "direction": "Inbound",
+            "priority": 65001,
+            "protocol": "*",
+            "provisioningState": "Succeeded",
+            "sourceAddressPrefix": "AzureLoadBalancer",
+            "sourceAddressPrefixes": [],
+            "sourcePortRange": "*",
+            "sourcePortRanges": []
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+        },
+        {
+          "etag": "W/\"6bbd9aee-4970-437a-8eb7-7bdb310ce526\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1/defaultSecurityRules/DenyAllInBound",
+          "name": "DenyAllInBound",
+          "properties": {
+            "access": "Deny",
+            "description": "Deny all inbound traffic",
+            "destinationAddressPrefix": "*",
+            "destinationAddressPrefixes": [],
+            "destinationPortRange": "*",
+            "destinationPortRanges": [],
+            "direction": "Inbound",
+            "priority": 65500,
+            "protocol": "*",
+            "provisioningState": "Succeeded",
+            "sourceAddressPrefix": "*",
+            "sourceAddressPrefixes": [],
+            "sourcePortRange": "*",
+            "sourcePortRanges": []
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+        },
+        {
+          "etag": "W/\"6bbd9aee-4970-437a-8eb7-7bdb310ce526\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1/defaultSecurityRules/AllowVnetOutBound",
+          "name": "AllowVnetOutBound",
+          "properties": {
+            "access": "Allow",
+            "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+            "destinationAddressPrefix": "VirtualNetwork",
+            "destinationAddressPrefixes": [],
+            "destinationPortRange": "*",
+            "destinationPortRanges": [],
+            "direction": "Outbound",
+            "priority": 65000,
+            "protocol": "*",
+            "provisioningState": "Succeeded",
+            "sourceAddressPrefix": "VirtualNetwork",
+            "sourceAddressPrefixes": [],
+            "sourcePortRange": "*",
+            "sourcePortRanges": []
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+        },
+        {
+          "etag": "W/\"6bbd9aee-4970-437a-8eb7-7bdb310ce526\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1/defaultSecurityRules/AllowInternetOutBound",
+          "name": "AllowInternetOutBound",
+          "properties": {
+            "access": "Allow",
+            "description": "Allow outbound traffic from all VMs to Internet",
+            "destinationAddressPrefix": "Internet",
+            "destinationAddressPrefixes": [],
+            "destinationPortRange": "*",
+            "destinationPortRanges": [],
+            "direction": "Outbound",
+            "priority": 65001,
+            "protocol": "*",
+            "provisioningState": "Succeeded",
+            "sourceAddressPrefix": "*",
+            "sourceAddressPrefixes": [],
+            "sourcePortRange": "*",
+            "sourcePortRanges": []
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+        },
+        {
+          "etag": "W/\"6bbd9aee-4970-437a-8eb7-7bdb310ce526\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1/defaultSecurityRules/DenyAllOutBound",
+          "name": "DenyAllOutBound",
+          "properties": {
+            "access": "Deny",
+            "description": "Deny all outbound traffic",
+            "destinationAddressPrefix": "*",
+            "destinationAddressPrefixes": [],
+            "destinationPortRange": "*",
+            "destinationPortRanges": [],
+            "direction": "Outbound",
+            "priority": 65500,
+            "protocol": "*",
+            "provisioningState": "Succeeded",
+            "sourceAddressPrefix": "*",
+            "sourceAddressPrefixes": [],
+            "sourcePortRange": "*",
+            "sourcePortRanges": []
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+        }
+      ],
+      "provisioningState": "Succeeded",
+      "resourceGuid": "e1d4c241-94c0-4612-8567-7df32eee49d5",
+      "securityRules": [
+        {
+          "etag": "W/\"6bbd9aee-4970-437a-8eb7-7bdb310ce526\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1/securityRules/allow https",
+          "name": "allow https",
+          "properties": {
+            "access": "Allow",
+            "description": "value",
+            "destinationAddressPrefix": "*",
+            "destinationAddressPrefixes": [],
+            "destinationPortRange": "443",
+            "destinationPortRanges": [],
+            "direction": "Inbound",
+            "priority": 110,
+            "protocol": "tcp",
+            "provisioningState": "Succeeded",
+            "sourceAddressPrefix": "*",
+            "sourceAddressPrefixes": [],
+            "sourcePortRange": "*",
+            "sourcePortRanges": []
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/networkSecurityGroups/securityRules"
+        },
+        {
+          "etag": "W/\"6bbd9aee-4970-437a-8eb7-7bdb310ce526\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1/securityRules/allow http",
+          "name": "allow http",
+          "properties": {
+            "access": "Allow",
+            "description": "value",
+            "destinationAddressPrefix": "*",
+            "destinationAddressPrefixes": [],
+            "destinationPortRange": "80",
+            "destinationPortRanges": [],
+            "direction": "Inbound",
+            "priority": 100,
+            "protocol": "tcp",
+            "provisioningState": "Succeeded",
+            "sourceAddressPrefix": "*",
+            "sourceAddressPrefixes": [],
+            "sourcePortRange": "*",
+            "sourcePortRanges": []
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/networkSecurityGroups/securityRules"
+        }
+      ]
+    },
+    "resourceGroup": "josh-test-rg",
+    "sku": null,
+    "subscriptionId": "6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b",
+    "tags": {},
+    "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "type": "microsoft.network/networksecuritygroups",
+    "zones": null
+  },
+  {
+    "extendedLocation": null,
+    "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/virtualNetworks/vnet1",
+    "identity": null,
+    "kind": "",
+    "location": "westus2",
+    "managedBy": "",
+    "name": "vnet1",
+    "plan": null,
+    "properties": {
+      "addressSpace": {
+        "addressPrefixes": [
+          "10.0.0.0/16"
+        ]
+      },
+      "dhcpOptions": {
+        "dnsServers": []
+      },
+      "enableDdosProtection": false,
+      "provisioningState": "Succeeded",
+      "resourceGuid": "02759612-dff6-46be-84f9-3413228b717d",
+      "subnets": [
+        {
+          "etag": "W/\"e8d39fc2-d71e-4ec2-a200-8dc491fef7b5\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+          "name": "subnet1",
+          "properties": {
+            "addressPrefix": "10.0.0.0/24",
+            "delegations": [],
+            "networkSecurityGroup": {
+              "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/networkSecurityGroups/nsg1",
+              "resourceGroup": "josh-test-rg"
+            },
+            "privateEndpointNetworkPolicies": "Enabled",
+            "privateLinkServiceNetworkPolicies": "Enabled",
+            "provisioningState": "Succeeded"
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/virtualNetworks/subnets"
+        },
+        {
+          "etag": "W/\"e8d39fc2-d71e-4ec2-a200-8dc491fef7b5\"",
+          "id": "/subscriptions/6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b/resourceGroups/josh-test-rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet2",
+          "name": "subnet2",
+          "properties": {
+            "addressPrefix": "10.0.1.0/24",
+            "delegations": [],
+            "privateEndpointNetworkPolicies": "Enabled",
+            "privateLinkServiceNetworkPolicies": "Enabled",
+            "provisioningState": "Succeeded"
+          },
+          "resourceGroup": "josh-test-rg",
+          "type": "Microsoft.Network/virtualNetworks/subnets"
+        }
+      ],
+      "virtualNetworkPeerings": []
+    },
+    "resourceGroup": "josh-test-rg",
+    "sku": null,
+    "subscriptionId": "6c1f4f3b-f65f-4667-8f9e-b9c48e09cd6b",
+    "tags": {},
+    "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "type": "microsoft.network/virtualnetworks",
+    "zones": null
+  }
+]
