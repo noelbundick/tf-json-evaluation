@@ -26,6 +26,25 @@ az graph query -q 'where resourceGroup == "test-rg1"' > ./graphs/1-add-https.gra
 terraform destroy
 ```
 
+For Powershell:
+```shell
+terraform init
+
+terraform plan -out ./plans/0-initial.tfplan
+terraform show -json ./plans/0-initial.tfplan | jq . > ./plans/0-initial.tfplan.json
+terraform apply ./plans/0-initial.tfplan
+az graph query -q "where resourceGroup == 'test-rg1'" > ./graphs/0-initial.graph.json
+
+# uncomment the added NSG rule in main.tf
+
+terraform plan -out ./plans/1-add-https.tfplan
+terraform show -json ./plans/1-add-https.tfplan | jq . > ./plans/1-add-https.tfplan.json
+terraform apply ./plans/1-add-https.tfplan
+az graph query -q "where resourceGroup == 'test-rg1'" > ./graphs/1-add-https.graph.json
+
+terraform destroy
+```
+
 ## Learnings
 
 - Terraform plan JSON files do not contain hydrated actual values on first plan, because those are populated at deployment time by the Azure resource provider. Ex:
